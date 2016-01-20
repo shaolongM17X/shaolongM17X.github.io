@@ -23,6 +23,10 @@ ul {
   color: white;
 }
 
+.side-menu li:hover {
+  background-color: #303F9F;
+}
+
 a {
   text-decoration: none;
 }
