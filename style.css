@@ -33,13 +33,10 @@ a {
   padding: 10px 16px;
 }
 
-
-
-
 body {
   left: 0;
   margin: 0;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   font-family: 'SimHei', sans-serif;
   position: relative;

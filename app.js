@@ -4,9 +4,6 @@ var main = function(){
         left: "0px"
       },200);
 
-      $("body").animate({
-        left: "250px"
-      },200);
   });
 
   $(".entypo-left-open-big").click(function(){
@@ -14,9 +11,7 @@ var main = function(){
         left: "-250px"
       },200);
 
-      $("body").animate({
-        left: "0px"
-      },200);
+  
 
   });
 
