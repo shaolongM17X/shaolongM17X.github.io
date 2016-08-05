@@ -11,10 +11,12 @@ body {
 .master-view {
   background: white;
   position: relative;
-  width: 60%;
-  min-width: 350px;
+  width: 30%;
+  min-width: 400px;
   margin: 0;
-  height: 100%; }
+  height: 100%;
+  -webkit-transition: width 2s;
+  transition: width 2s; }
   .master-view .name {
     position: relative; }
     .master-view .name .color-below-name {
@@ -40,8 +42,31 @@ body {
     bottom: 40px;
     left: 40px; }
 
+#arrow {
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: -28px;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out; }
+
+.transformed {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+.width-eighty {
+  width: 180%; }
+
+.width-twenty {
+  width: 20%; }
+
 .detail-view {
-  width: 40%;
-  background: #3F51B5; }
+  transition: background-color 0.5s ease;
+  width: 70%;
+  background: #fc3e1d; }
 
 /*# sourceMappingURL=style.css.map */

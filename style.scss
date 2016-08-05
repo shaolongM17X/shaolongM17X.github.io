@@ -1,7 +1,31 @@
 $background-red: #fc3e1d;
 $background-amber: #FFC107;
-$master-view-width: 60%;
+$master-view-width: 30%;
 $indigo-color: #3F51B5;
+
+@mixin transition($animation_time) {
+	-webkit-transition: $animation_time ease-in-out;
+	-moz-transition: $animation_time ease-in-out;
+	-o-transition: $animation_time ease-in-out;
+	transition: $animation_time ease-in-out;
+}
+
+@mixin widthTransition($time) {
+	-webkit-transition: width $time;
+	transition: width $time;
+}
+
+@mixin rotate_transform() {
+	-ms-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+@mixin rotateY_transform() {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
 html {
 	height: 100%;
 	width: 100%;
@@ -13,7 +37,7 @@ body {
 	display: flex;
 }
 
-$master-min-width: 350px;
+$master-min-width: 400px;
 .master-view {
 	background: white;
 	position: relative;
@@ -22,6 +46,7 @@ $master-min-width: 350px;
 	margin: 0;
 	height: 100%;
 	$font-size: 48px;
+	@include widthTransition(2s);
 	.name {
 		position: relative;
 		.color-below-name {
@@ -55,7 +80,30 @@ $master-min-width: 350px;
 	
 }
 
+#arrow {
+	background-color: black;
+	color: white;
+	position: absolute;
+	right: -28px;
+	top: 0;
+	bottom: 0;
+	@include transition(1s);
+}
+
+.transformed {
+	@include rotateY_transform();
+}
+
+.width-eighty {
+	width: 180%;
+}
+.width-twenty {
+	width: 20%;
+}
+
 .detail-view {
+	transition: background-color 0.5s ease;
 	width: 100% - $master-view-width;
-	background: $indigo-color;
+	// background: $indigo-color;
+	background: $background-red;
 }
