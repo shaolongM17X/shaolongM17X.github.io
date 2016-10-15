@@ -80,15 +80,6 @@ $master-min-width: 400px;
 	
 }
 
-#arrow {
-	background-color: black;
-	color: white;
-	position: absolute;
-	right: -28px;
-	top: 0;
-	bottom: 0;
-	@include transition(1s);
-}
 
 .transformed {
 	@include rotateY_transform();
@@ -104,6 +95,8 @@ $master-min-width: 400px;
 .detail-view {
 	transition: background-color 0.5s ease;
 	width: 100% - $master-view-width;
-	// background: $indigo-color;
-	background: $background-red;
+	background: $indigo-color;
+	// background: #e8e8e8;
+	overflow: scroll;
+	padding: 20px;
 }

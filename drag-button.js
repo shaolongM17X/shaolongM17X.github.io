@@ -1,8 +1,6 @@
 $(function() {
-	var $arrow_button = $("#arrow");
-	$arrow_button.click(function() {
-		$arrow_button.toggleClass("transformed");
+	var $portfolio_btn = $("#portfolio_btn");
+	$portfolio_btn.click(function() {
 		$(".master-view").toggleClass("width-eighty");
-
 	});
 });
