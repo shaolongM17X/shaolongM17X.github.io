@@ -8,7 +8,7 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'What did you let me take all the trouble to powder my nose for then?” she demanded. “You know ma won’t let me go alone in that crowd, and there’s sure to be some news.',
+      'What did you let me take all the trouble to powder my nose for then? she demanded. You know ma won’t let me go alone in that crowd, and there’s sure to be some news.',
   'example2':
       'In what is called real life (which is only a great game, although a mighty good one) it makes no difference what you call your king.',
   'example3':
