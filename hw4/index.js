@@ -57,7 +57,7 @@ function doPredict(predict) {
   //console.log(score_string);
   status(
       score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)' + '
-' + 'Most likely it is from' + );
+' + 'Most likely it is from ' + names[largest]);
 }
 
 function prepUI(predict) {
