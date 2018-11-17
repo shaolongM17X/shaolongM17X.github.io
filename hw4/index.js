@@ -8,11 +8,11 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'Alice was beginning to get very tired of sitting by her sister on the bank.',
+      'What did you let me take all the trouble to powder my nose for then?” she demanded. “You know ma won’t let me go alone in that crowd, and there’s sure to be some news.',
   'example2':
-      'Buda-Pesth seems a wonderful place.',
+      'In what is called real life (which is only a great game, although a mighty good one) it makes no difference what you call your king.',
   'example3':
-      'Scepticism was as much the result of knowledge, as knowledge is of scepticism.'      
+      'There is a great difficulty in the way of a writer who attempts to sketch a living Constitution--a Constitution that is in actual work and power.'      
 };
 
 function status(statusText) {
@@ -46,12 +46,18 @@ function doPredict(predict) {
   const textField = document.getElementById('text-entry');
   const result = predict(textField.value);
   score_string = "Class scores: ";
+  names = ['Girls of 64', 'Affair in Araby', 'English Constitution']
+  largest = 0
   for (var x in result.score) {
     score_string += x + " ->  " + result.score[x].toFixed(3) + ", "
+    if(result.score[x] > result.score[largest]){
+      largest = x;
+      }
   }
   //console.log(score_string);
   status(
-      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)');
+      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)' + '
+' + 'Most likely it is from' + );
 }
 
 function prepUI(predict) {
